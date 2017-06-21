@@ -8,8 +8,9 @@
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<!--  fonts -->
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:200,300" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="assets/fonts/style.css">
+	<script src="https://use.fontawesome.com/b0ff5da9e7.js"></script>
 	<!-- estilos  -->
 	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
 </head>
@@ -97,15 +98,19 @@
 	<section id="tarifas">
 		<div class="container-fluid">
 			<div class="row">
-				<div class="col-md-10">
+				<div class="col-md-10 col-md-offset-1">
 					<div class="row">
-						<div class="col-md-6">
+						<div class="col-md-6 text-left">
 							<h2>Tarifas</h2>
 							<p>Consulta las tarifas LabCar aquí</p>
-							<input class="text" placeholder="Ingrese punto de partida">
-							<input class="text" placeholder="IIngrese un destino">
+							<img src="assets/img/circulo.png">
+							<input id="partida" type="text" placeholder="ingrese su punto de partida">
+							</br>
+							<img src="assets/img/flecha.png">
+							<input id="destino" type="text" placeholder="ingrese su destino">
+							<button id="trazar" type="submit" class="text-uppercase">¡Trazar ruta!</button>
 						</div>
-						<div class="col-md-6">
+						<div class="col-md-6 marco-mapa">
 							<div id="mapa">
 							<!-- soy un mapa -->
 							</div>
@@ -121,7 +126,7 @@
 
 <!-- Archivos JavaScript -->
 	<!-- API Geolocation-->
-	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaHsGEZQiHbcJXOWPBjo6_tdjECwlkewk&libraries=places&callback=initMap"
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDaHsGEZQiHbcJXOWPBjo6_tdjECwlkewk&callback=initMap"
   type="text/javascript"></script>
   	<!-- Libreria JQuery-->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
