@@ -7,6 +7,11 @@ Color gris (footer): #2b2b2b
 	padding: 0;
 }
 
+body{
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 300;
+}
+
 /*estilos HEADER*/
 .espacios{ /*para centrar logo en MOVIL y quitar linea hamburguesa*/
 	margin-left: 20px;
@@ -50,10 +55,17 @@ nav{
 
 .viaja{
 	padding: 20px 0 0 0;
+	font-size: 18px;
 }
 
 .viaja img{
+	width: 20%;
 	padding-left: 10px;
+}
+
+.registro{
+	font-size: 12px;
+	text-transform: uppercase;
 }
 
 .caja-amarilla input{
@@ -74,6 +86,11 @@ nav{
 	padding: 7px;
 }
 
+.caja-amarilla h1{
+	font-size: 30px;
+	font-weight: 300;
+}
+
 .caja-amarilla span{
 	padding: 0 50px;
 }
@@ -91,7 +108,19 @@ nav{
 }
 
 #informacion img{
-	width: 100%;
+	width: 75%;
+}
+
+#informacion h2{
+	font-size: 26px;
+	font-weight: 300;
+}
+
+#informacion p{
+	width:95%;
+	font-size: 18px;
+	font-weight: 200;
+	padding:10px 0;
 }
 
 .descarga-app{
