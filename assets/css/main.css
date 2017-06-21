@@ -104,11 +104,12 @@ nav{
 
 .linea-blanca{
 	border: solid thin white;
-	padding: 30px 80px 30px 50px;
+	padding: 30px;
 }
 
-#informacion img{
-	width: 75%;
+#informacion .linea-blanca img{
+	width: 90%;
+	padding: 0 10px;
 }
 
 #informacion h2{
@@ -123,6 +124,32 @@ nav{
 	padding:10px 0;
 }
 
-.descarga-app{
-	padding-right: 50px;
+#conduce{
+	background-image: url(../img/conduce.jpg);
+	background-size: cover;
+	background-position: center;
+	height: 400px;
+}
+
+.caja-conduce{ /*transparencia*/
+	background-color: rgba(0,0,0,0.5);
+	color:white;
+	height: 400px;
+	padding: 85px 50px;
+}
+
+#conduce h2{
+	font-size: 24px;
+	font-weight: 300;
+}
+
+#conduce p{
+}
+
+#conduce button{
+	background-color: #f7b617;
+	font-weight: 300;
+	padding:7px;
+	border:none;
+	border-radius:5px;
 }
