@@ -153,3 +153,8 @@ nav{
 #tarifas{
 	background-color:#f7b617;
 }
+
+#mapa{
+	width: 100%;
+	height:200px;
+}
