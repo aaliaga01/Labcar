@@ -205,3 +205,50 @@ input::placeholder{
 	margin-top: 15px;
 	margin-left: 70px;
 }
+
+/*estilos FOOTER*/
+footer {
+	padding: 60px 0;
+	background-color: #2b2b2b;
+	color: white;
+	font-weight: 200;
+}
+
+footer ul li{
+	list-style-type: none;
+	font-size: 11px;
+	padding: 8px 0;
+}
+
+footer img{
+	padding-bottom: 10px;
+}
+
+.redes{
+	vertical-align:text-bottom;
+}
+
+.lineas{
+	border-top:solid thin white;
+	border-bottom:solid thin white;
+	margin: 0;
+	padding: 10px;
+}
+
+.apps{
+	padding-top: 150px;
+}
+
+.apps img{
+	width: 60%;
+}
+
+.redes{
+	padding-top: 225px;
+	margin-left: -28px;
+}
+
+footer p{
+	padding-top: 10px;
+	font-size: 13px;
+}
