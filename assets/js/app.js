@@ -1,11 +1,17 @@
 /*Geolocalizacion*/
 
 function initMap() {
+
+		var directionsService = new google.maps.DirectionsService;
+        var directionsDisplay = new google.maps.DirectionsRenderer;
+
         var map = new google.maps.Map(document.getElementById('mapa'), {
           center: {lat: -33.4569400, lng: -70.6482700}, //muestra ubicacion inicial en stgo
           zoom: 17,
           disableDefaultUI: true
         });
+        
+         directionsDisplay.setMap(map);
 
         // Pregunta si quieres activar geolocalizacion.
         if (navigator.geolocation) {
@@ -43,6 +49,28 @@ function initMap() {
   		var destinoAutoComp = (document.getElementById('destino')); //toma punto de destino
   		var autocompletar = new google.maps.places.Autocomplete(destinoAutoComp);
   		autocompletar.bindTo('bounds', map);
+
+  		//para que funcione con el boton
+  		document.getElementById("trazar").addEventListener("click", function(){
+          calculateAndDisplayRoute(directionsService, directionsDisplay);
+        });
+
+  		//toma los datos de ambos input y los busca
+
+      	function calculateAndDisplayRoute(directionsService, directionsDisplay) {
+        directionsService.route({
+          origin: document.getElementById('partida').value,
+          destination: document.getElementById('destino').value,
+          travelMode: 'DRIVING'
+        }, function(response, status) {
+          if (status === 'OK') {
+            directionsDisplay.setDirections(response);
+          } else {
+            window.alert('Directions request failed due to ' + status);
+          }
+        });
+      }
+
 
 }// fin de funcion initMap
 
