@@ -1,16 +1,16 @@
 /*Geolocalizacion*/
 
 function initMap() {
-
+		//para calcular la ruta entre dos puntos
 		var directionsService = new google.maps.DirectionsService;
         var directionsDisplay = new google.maps.DirectionsRenderer;
 
         var map = new google.maps.Map(document.getElementById('mapa'), {
           center: {lat: -33.4569400, lng: -70.6482700}, //muestra ubicacion inicial en stgo
           zoom: 17,
-          disableDefaultUI: true
+          disableDefaultUI: true //quita el zoom y las vistas de mapa
         });
-        
+
          directionsDisplay.setMap(map);
 
         // Pregunta si quieres activar geolocalizacion.
@@ -66,11 +66,10 @@ function initMap() {
           if (status === 'OK') {
             directionsDisplay.setDirections(response);
           } else {
-            window.alert('Directions request failed due to ' + status);
+            window.alert('Tu busqueda a generado error: ' + status);
           }
         });
       }
-
 
 }// fin de funcion initMap
 
