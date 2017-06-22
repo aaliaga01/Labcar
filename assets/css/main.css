@@ -33,7 +33,7 @@ nav{
 }
 
 .logo img{
-	width: 95%;
+	width: 88%;
 }
 
 /*estilos HERO*/
@@ -152,7 +152,7 @@ nav{
 /*estilos TARIFAS*/
 #tarifas{
 	background-color:#f7b617;
-	padding: 30px 0;
+	padding: 40px 0;
 	color:white;
 }
 
@@ -201,9 +201,10 @@ input::placeholder{
 	color:black;
 	background-color: white;
 	border:none;
-	padding: 7px 20px;
+	padding: 7px 30px;
 	margin-top: 15px;
 	margin-left: 70px;
+	margin-bottom: 20px;
 }
 
 /*estilos FOOTER*/
@@ -240,7 +241,7 @@ footer img{
 }
 
 .apps img{
-	width: 60%;
+	width: 70%;
 }
 
 .redes{
@@ -251,4 +252,37 @@ footer img{
 footer p{
 	padding-top: 10px;
 	font-size: 13px;
+}
+
+/*------------ estilos MOVIL*/
+/*estilos header*/
+.texto-movil button{
+	padding: 7px 10px;
+	margin-bottom: 20px;
+}
+
+.info-movil img{
+	width: 70%;
+	margin:5px 15px;
+}
+
+.info-movil p{
+	margin-top: 25px;
+}
+
+.redes-movil{
+	margin-top: -145px;
+}
+
+.espacio-redes-movil{
+	padding-bottom: 30px;
+}
+
+.espacio-redes-movil span{
+	padding: 3px;
+}
+
+.espacio-redes-movil img{
+	width: 100%;
+	padding: 22px 0 0 0;
 }
