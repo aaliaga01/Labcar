@@ -34,6 +34,16 @@ function initMap() {
           // se ejecuta esta funcion si no escuentra la ubicacion
           error(false, map.getCenter());
         }
+
+        //para autocompletar
+ 		var origenAutoComp = (document.getElementById('partida')); //toma punto de origen
+  		var autocompletar = new google.maps.places.Autocomplete(origenAutoComp);
+  		autocompletar.bindTo('bounds', map);
+
+  		var destinoAutoComp = (document.getElementById('destino')); //toma punto de destino
+  		var autocompletar = new google.maps.places.Autocomplete(destinoAutoComp);
+  		autocompletar.bindTo('bounds', map);
+
 }// fin de funcion initMap
 
       //funcion para mensaje de error
