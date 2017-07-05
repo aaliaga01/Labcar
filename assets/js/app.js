@@ -1,10 +1,7 @@
 /*Geolocalizacion*/
 
 function initMap() {
-		//para calcular la ruta entre dos puntos
-		var directionsService = new google.maps.DirectionsService;
-        var directionsDisplay = new google.maps.DirectionsRenderer;
-
+		
         var map = new google.maps.Map(document.getElementById('mapa'), {
           center: {lat: -33.4569400, lng: -70.6482700}, //muestra ubicacion inicial en stgo
           zoom: 17,
@@ -50,23 +47,27 @@ function initMap() {
   		var autocompletar = new google.maps.places.Autocomplete(destinoAutoComp);
   		autocompletar.bindTo('bounds', map);
 
-  		//para que funcione con el boton
-  		document.getElementById("trazar").addEventListener("click", function(){
-          calculateAndDisplayRoute(directionsService, directionsDisplay);
+	
+  	//para que funcione con el boton
+  	document.getElementById("trazar").addEventListener("click", function(){
+         	calculateAndDisplayRoute(directionsService, directionsDisplay);
         });
-
-  		//toma los datos de ambos input y los busca
-
+	
+	//para calcular la ruta entre dos puntos
+	var directionsService = new google.maps.DirectionsService;
+        var directionsDisplay = new google.maps.DirectionsRenderer;
+	
+  	//toma los datos de ambos input y los busca
       	function calculateAndDisplayRoute(directionsService, directionsDisplay) {
         directionsService.route({
-          origin: document.getElementById('partida').value,
-          destination: document.getElementById('destino').value,
-          travelMode: 'DRIVING'
+          	origin: document.getElementById('partida').value,
+          	destination: document.getElementById('destino').value,
+          	travelMode: 'DRIVING'
         }, function(response, status) {
-          if (status === 'OK') {
-            directionsDisplay.setDirections(response);
+          	if (status === 'OK') {
+            	directionsDisplay.setDirections(response);
           } else {
-            window.alert('Tu busqueda a generado error: ' + status);
+            	window.alert('Tu busqueda a generado error: ' + status);
           }
         });
       }
