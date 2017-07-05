@@ -46,16 +46,15 @@ function initMap() {
   		var destinoAutoComp = (document.getElementById('destino')); //toma punto de destino
   		var autocompletar = new google.maps.places.Autocomplete(destinoAutoComp);
   		autocompletar.bindTo('bounds', map);
-
+	
+	//para calcular la ruta entre dos puntos
+	var directionsService = new google.maps.DirectionsService;
+        var directionsDisplay = new google.maps.DirectionsRenderer;
 	
   	//para que funcione con el boton
   	document.getElementById("trazar").addEventListener("click", function(){
          	calculateAndDisplayRoute(directionsService, directionsDisplay);
         });
-	
-	//para calcular la ruta entre dos puntos
-	var directionsService = new google.maps.DirectionsService;
-        var directionsDisplay = new google.maps.DirectionsRenderer;
 	
   	//toma los datos de ambos input y los busca
       	function calculateAndDisplayRoute(directionsService, directionsDisplay) {
