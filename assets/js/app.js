@@ -1,7 +1,11 @@
 /*Geolocalizacion*/
 
 function initMap() {
-		
+	
+	//para calcular la ruta entre dos puntos
+	var directionsService = new google.maps.DirectionsService;
+        var directionsDisplay = new google.maps.DirectionsRenderer;
+	
         var map = new google.maps.Map(document.getElementById('mapa'), {
           center: {lat: -33.4569400, lng: -70.6482700}, //muestra ubicacion inicial en stgo
           zoom: 17,
@@ -46,10 +50,6 @@ function initMap() {
   		var destinoAutoComp = (document.getElementById('destino')); //toma punto de destino
   		var autocompletar = new google.maps.places.Autocomplete(destinoAutoComp);
   		autocompletar.bindTo('bounds', map);
-	
-	//para calcular la ruta entre dos puntos
-	var directionsService = new google.maps.DirectionsService;
-        var directionsDisplay = new google.maps.DirectionsRenderer;
 	
   	//para que funcione con el boton
   	document.getElementById("trazar").addEventListener("click", function(){
